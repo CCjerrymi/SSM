@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CompleteDao">
+	<cache />
+	<insert id="saveResult" parameterType="com.entity.User">  
+     <![CDATA[   
+         insert into result (resultID,questnaireID,questionID,resultA,resultB,resultC,resultD,userIP,submitTime)
+         values(#{entity.resultID},#{entity.questnaireID},#{entity.questionID},#{entity.resultA},#{entity.resultB},#{entity.resultC},#{entity.resultD},#{entity.userIP},#{entity.submitTime})	
+     ]]>
+	</insert>
+	
+ 	<select id = "getQuestionByCondition" resultType="map">
+		<![CDATA[   
+			select questionID,singlestate from question
+		]]>
+		<where>
+			<if test="condition != null">
+				questnaireID = #{condition}
+			</if>
+		</where>
+	</select>
+</mapper>

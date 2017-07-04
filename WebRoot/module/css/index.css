@@ -1,0 +1,265 @@
+ body {
+	margin: 0px 0px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#total{
+	width: 100%;
+	height: 100%;
+}
+
+#top{
+	width: 100%;
+	height: 600px;
+	background: url(../img/index.png);
+	 background-size: 100% 600px; 
+}
+#head{
+	width:70%;
+	height:120px;
+	margin:0 auto;
+	
+}
+
+#logo{
+	width: 80px;
+	height: 80px;
+}
+
+/* #title{
+	border:1px solid red;
+	width:500px;
+	height:300px;
+} */
+#title ul li{
+	margin-right:50px;
+	font-size: 20px;
+	float: left;
+	color: #ffffff;
+}
+
+#op{
+	float: right;
+	width: 200px;
+	height: 20px;
+}
+
+.lobutton{
+	float:right;
+	background-color:transparent;
+	width: 60px;
+	height: 30px;
+	margin-right: 20px;
+	border: 1px solid #a2c4c9;
+	color:#ffffff;	
+}
+
+#secondArea{
+	width: 100%;
+	height: 180px;
+}
+
+#secondMiddle{
+	margin: 0;
+	width:100%;
+	height: 180px;
+}
+
+#tip_1{
+	margin: auto;
+	width:500px;
+	height:23px;
+
+}
+
+#tip_2{
+	margin: auto;
+	width:200px;
+	height:23px;
+
+}
+
+#tip_3{
+	margin: auto;
+	width:410px;
+	height:23px;
+
+}
+
+.tipInfo {
+	font-size: 20px;
+    line-height: 28px;
+}
+
+/*鐧诲綍娉ㄥ唽*/
+
+#loginbutton {
+	border:0;
+	background-color: #506078;
+	color:white;
+	font-size: 17px;
+	float: right;
+	margin-top: 30px;
+}
+
+#zhuce {
+	border:0;
+	background-color: #506078;
+	color:white;
+	font-size: 17px;
+	float:right;
+	margin-top: 30px;
+	margin-left: 2px
+
+}
+
+
+.login_tip{ 
+    margin-right: 40px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-top: 20px;
+    color:blue;
+    font-size: 25px;
+}
+p{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+	height:5px;
+	font-family:"寰蒋闆呴粦,瀹嬩綋"锛�
+	font-size:17px;coloe:blue
+}
+
+#login_arear {
+	border: 1px solid red;
+	position:absolute;
+	z-index:100;
+    position: absolute;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    background-color: #506078;
+    filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);
+    opacity: 0.7;
+    display: none;
+}
+
+#login_info {
+	position:absolute;
+	z-index:200;
+	width: 300px;
+	height: 350px;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+	/*border: 2px solid blue;*/
+	background-color: white;
+	border-radius: 1em;
+	display: none;
+}
+
+.login_redio{
+	margin-top:10px;
+	margin-left:50px;
+	
+}
+
+.input {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+	/*margin-top:5px;
+	margin-right:10px;
+	margin-bottom:10px;
+	padding-left:50px;*/
+	width:200px;height:30px;
+	border:2px solid #506078;
+}
+
+.button {
+	margin: 20px 20px 0px 50px;
+	width: 60px;
+	height:30px;
+	background-color: #506078;
+	border:0;
+	font-size: 17px;
+	border-radius:0.2em;
+	color:#ffffff;
+}
+
+#regist_arear {
+	position:absolute;
+	z-index:500;
+	width: 520px;
+	height: 480px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -250px;
+	border: 2px solid #66CDAA;
+	background-color: white;
+	border-radius: 0.6em;
+	display: none;
+}
+
+
+.button {
+	width: 60px;
+	height:30px;
+	background-color: #506078;
+	margin: 20 20 0 50;
+	border:0;
+	font-size: 17px;
+}
+
+h2{margin:20px 40px 25px 200px;color:#506078}
+
+.column {
+	width:173px;
+	height:70px;
+	float:left;
+	margin-left: 60px;
+}
+
+.button_arear {
+	float:left;
+	width:600px;
+	height:30px;
+
+	margin-top: 20px;
+	margin-left:30px;
+}
+
+.zhucebutton {
+	margin: 20px 20px 0px 110px;
+    width: 60px;
+    height: 30px;
+    background-color: #506078;
+    border: 0;
+    font-size: 17px;
+    border-radius: 0.2em;
+    color:#ffffff;
+}
+.regist_input {
+    height: 30px;
+    border: 2px solid #506078;
+    margin-top: 5px;
+}
+
+#regist_arear {
+	position:absolute;
+	z-index:500;
+	display: none;
+}
+

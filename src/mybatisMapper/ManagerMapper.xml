@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.ManagerDao">
+	<cache />
+	
+		<insert id="addUser" parameterType="com.entity.User">  
+     <![CDATA[   
+         insert into sy_user (userId,userName,password)
+         values(#{entity.userId},#{entity.userName},#{entity.password})	
+     ]]>
+	</insert>
+	
+	<insert id="addManager" parameterType="com.entity.Manager">  
+     <![CDATA[   
+         insert into Sy_manager (ID, passWord, loginName)
+         values(#{entity.ID}, #{entity.passWord}, #{entity.loginName})	
+     ]]>
+	</insert>
+
+	<select id="getManagerByCondition" resultType="com.entity.Manager">
+		<![CDATA[   
+			select * from sy_manager 
+		]]>
+		<where>
+			<if test="condition != null">
+				loginName = #{condition}
+			</if>
+		</where>
+	</select>
+
+	<select id="getUserByCondition" resultType="com.entity.User"
+		parameterType="String">
+		<![CDATA[   
+			select * from sy_user 
+		]]>
+		<where>
+			<if test="condition != null">
+				#{condition}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getPassword"  resultType="com.entity.Manager">
+		<![CDATA[   
+			select * from sy_manager 
+		]]>
+		<where>
+			<if test="condition != null">
+				ID = #{condition}
+			</if>
+		</where>
+	</select>
+
+
+	
+	<select id="checkValue" resultType="int">
+		<![CDATA[   
+			select CONUT(*) from #{table}
+		]]>
+		<where>
+			<if test="condition != null">
+				#{condition}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getQuestionnaire" resultType="map">
+		<![CDATA[
+			select * from  questionnaire
+		]]>
+		<where>
+			1 = 1
+		</where>
+	
+	</select>
+	
+	<select id="getQuestionnaireByCondition" resultType="string">
+		<![CDATA[
+			select distinct questnaireID from result
+		]]>
+		<where>
+			<if test="condition != null">
+				userIP = #{condition}
+			</if>
+		</where>
+	
+	</select>
+	
+	<select id="getAlluser" resultType="map">
+		select distinct userIP from result
+	</select>
+
+</mapper>

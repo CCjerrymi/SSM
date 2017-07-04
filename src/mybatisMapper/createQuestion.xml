@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.QuestionDao">
+	<cache />
+	
+		<insert id="addQuestionNaire" parameterType="com.entity.Questionnaire">  
+     <![CDATA[   
+         insert into questionnaire (questnaireID,questnaireName)
+         values(#{entity.questnaireID},#{entity.questnaireName})	
+     ]]>
+	</insert>
+	
+	<insert id="addQuestion" parameterType="com.entity.Question">  
+     <![CDATA[   
+         insert into question (questionID, questnaireID, question, singlestate,nullstate)
+         values(#{questionID}, #{questnaireID}, #{question}, #{singlestate},#{nullstate})	
+     ]]>
+	</insert>
+
+	<select id="getManagerByCondition" resultType="com.entity.Manager">
+		<![CDATA[   
+			select ID,passWord,loginName,state from sy_manager 
+		]]>
+		<where>
+			<if test="condition != null">
+				${condition}
+			</if>
+		</where>
+	</select>
+
+	<select id="getNaireID" resultType="string"
+		parameterType="String">
+		<![CDATA[   
+			select * from questionnaire 
+		]]>
+		<where>
+			<if test="condition != null">
+				questnaireName = #{condition}
+			</if>
+		</where>
+	</select>
+
+
+	
+	<select id="checkValue" resultType="int">
+		<![CDATA[   
+			select CONUT(*) from #{table}
+		]]>
+		<where>
+			<if test="condition != null">
+				#{condition}
+			</if>
+		</where>
+	</select>
+
+</mapper>
